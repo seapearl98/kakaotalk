@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kakaotalk/static/css/main.f05cf1a0.css",
+    "main.js": "/kakaotalk/static/js/main.133ba3e8.js",
+    "static/media/kakaofriends.png": "/kakaotalk/static/media/kakaofriends.84375bb9f89d79ccd760.png",
+    "static/media/path.png": "/kakaotalk/static/media/path.7d00edf73f07bdcecc6d.png",
+    "static/media/kakaostory.png": "/kakaotalk/static/media/kakaostory.572f3ce5bf10fbdaac9d.png",
+    "static/media/bg_default.png": "/kakaotalk/static/media/bg_default.82687b4e75ad8b89fa96.png",
+    "index.html": "/kakaotalk/index.html",
+    "main.f05cf1a0.css.map": "/kakaotalk/static/css/main.f05cf1a0.css.map",
+    "main.133ba3e8.js.map": "/kakaotalk/static/js/main.133ba3e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f05cf1a0.css",
+    "static/js/main.133ba3e8.js"
+  ]
+}
