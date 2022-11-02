@@ -1,30 +1,30 @@
 
-.LoginForm{input{width: 100%;
+.LoginForm{
+    input{width: 100%;
     padding: 10px 0;
     margin-bottom: 2px;
     border-radius: 5px;
     border: none; 
     
-    &::placeholder{text-indent: 10px;}
-    &:nth-of-type(1){margin-top: -20px;}
-    &:nth-of-type(3){
-        margin-top: 5px;
-        padding: 13px 0;
-        color: rgb(255, 235, 160);
-        background: #3A1D1D;
-        cursor: pointer;
+        &::placeholder{text-indent: 10px;}
+        &:nth-of-type(1){margin-top: -20px;}
+        &:nth-of-type(3){
+            margin-top: 5px;
+            padding: 13px 0;
+            color: rgb(255, 235, 160);
+            background: #3A1D1D;
+            cursor: pointer;
+        }
     }
-}
-span:nth-last-of-type(1){
-    display: flex;
-    flex: content;
-    margin: 0 auto;
-    text-align: center; 
-    margin-top: 5px;
-    font-weight: 600;
-    padding: 3px 15px;
-    cursor: pointer;
-    color: #3A1D1D;
-    text-decoration: underline;
-}
+    span:nth-last-of-type(1){
+        display: block;
+        margin: 0 auto;
+        text-align: center; 
+        margin-top: 5px;
+        font-weight: 600;
+        padding: 3px 15px;
+        cursor: pointer;
+        color: #3A1D1D;
+        text-decoration: underline;
+    }
 }
