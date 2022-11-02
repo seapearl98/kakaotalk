@@ -46,7 +46,7 @@ export default function Main({userObj}) {
     }, []);
 
   return (
-<div>   
+<div className='mainpage'>   
     <Header/>
     <main>
         <form className="search_box">

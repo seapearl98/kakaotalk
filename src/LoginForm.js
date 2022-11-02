@@ -44,7 +44,7 @@ const onChange = e => {
    const  toggleAccount = () => setNewAccount( (prev) => !prev );
 
   return (
-<>   
+    <div className='LoginForm'>   
     <form onSubmit={onSubmit} className='container'>  
         <input type="email" placeholder='Email' required
         name='email' value={email} onChange={onChange} className='authInput'/>
@@ -54,6 +54,6 @@ const onChange = e => {
         {error && <span className='authError'>{error}</span>}
     </form>
     <span onClick={toggleAccount}>{newAccount ? "Sign In" : "Create Account"}</span>
-    </>
+    </div>
   )
 }
