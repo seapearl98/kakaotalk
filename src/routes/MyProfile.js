@@ -8,6 +8,7 @@ import { ref, uploadString, getDownloadURL } from "firebase/storage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { authService,db,storage } from '../fbase';
 import React, { useEffect,useState } from 'react'
+import '../styles/Profile.scss'
 
 
 export default function MyProfile({userObj}) {

@@ -4,6 +4,7 @@ import { collection, addDoc, query, getDoc, onSnapshot, orderBy, } from "firebas
 import { v4 as uuidv4 } from 'uuid';
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/TweetFactory.scss'
 
 function TweetFactory({userObj}) {
 
@@ -30,6 +31,7 @@ await addDoc(collection(db, "tweets"), {//트윗이라는 문서를 폴더에 �
     photoURL
   });
   setTweet("");
+  setNewPhoto("");
 }
 const onFileChange = e => {
     //console.log(e.target.files)
@@ -43,18 +45,34 @@ const onFileChange = e => {
     }
     reader.readAsDataURL(theFile)
   }
+  const onClearnewPhoto = () => setNewPhoto("")
 
   return (
     <form onSubmit={onSubmit} className="factoryForm">
+    <label htmlFor="attach-file" className='factoryInput__label'>
+    <FontAwesomeIcon icon="fa-solid fa-plus" /> 
+    </label>
+      
     <div className='factoryInput__container' style={{display:"flex"}}>
         <input type="text" placeholder="What's on your mind" value={tweet} onChange={onChange} maxLength={120}
         className="factoryInput__input"/>
-        <input type="submit" value="&rarr;"/>
+        <input type="submit" id='submit' value="&rarr;" 
+        className='factoryInput__arrow'
+        style={{opacity:0}}/>
+        <label htmlFor="submit" className='factoryInput__arrow__inner'>
+        <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
+        </label>
     </div>
-    <label htmlFor="attach-file" className='factoryInput__label'>
-    </label>
     <input type="file" accept='image/*' onChange={onFileChange}
-      id="attach-file" style={{opacity:0}}/>
+      id="attach-file" style={{opacity:0,display:'none'}}/>
+      {newPhoto && (
+    <div className='factoryForm__attachment'>
+      <img src={newPhoto} style={{backgroundImage:newPhoto,}}/>
+      <div className='factoryForm__clear' onClick={onClearnewPhoto}>
+        <FontAwesomeIcon icon="fa-solid fa-xmark" />
+      </div>
+    </div>
+    )}
   </form>
   )
 }

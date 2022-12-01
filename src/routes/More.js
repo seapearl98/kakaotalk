@@ -16,7 +16,7 @@ export default function More({userObj}) {
       }
 
   return (
-    <>
+    <div className='More'>
       <div className="Header">
       <div className='status-bar'>
           <div className="left-item">
@@ -94,6 +94,6 @@ export default function More({userObj}) {
     </section>
 </main>
 <Nav/>
-    </>
+    </div>
   )
 }

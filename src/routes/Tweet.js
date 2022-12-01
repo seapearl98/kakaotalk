@@ -3,6 +3,7 @@ import {db, storage} from '../fbase'
 import { doc, deleteDoc,updateDoc } from "firebase/firestore";
 import { ref, deleteObject } from "firebase/storage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/Tweet.scss'
 
 
 function Tweet({tweetObj,isOwner,newPhoto}) {
@@ -54,10 +55,10 @@ function Tweet({tweetObj,isOwner,newPhoto}) {
   return (
     <div className='tweet'>
           <>
-            <h4>{tweetObj.text}</h4>
             {tweetObj.photoURL && (
               <img src={tweetObj.photoURL} width="50" height="50"/>
-            )}
+              )}
+            <h4>{tweetObj.text}</h4>
             <span>{nowDate}</span>
             {isOwner && (
             <div className='tweet__actions'>

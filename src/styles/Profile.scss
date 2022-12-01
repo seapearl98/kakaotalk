@@ -1,6 +1,8 @@
 @import url(Common.scss);
 
-.chats{overflow-y: hidden;}
+.chats{
+    height: 100vh;
+    overflow-y: hidden;}
 .Header{
     .title-bar{
         .left-item{order: 1; text-align: left;

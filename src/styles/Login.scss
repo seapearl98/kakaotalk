@@ -1,5 +1,6 @@
 .Login{
     background: #ffd43d;
+    height: 100vh;
     .authContainer{
         display: flex;
         flex-direction: column;
@@ -29,7 +30,7 @@
                 font-weight: 400;
                 letter-spacing: 1px;
                 font-size: 14px;
-                &:nth-of-type(1){margin-top: -10px;}
+                &:nth-of-type(1){}
             }
         }
     }

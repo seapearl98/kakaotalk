@@ -20,7 +20,7 @@ export default function Chatting({userObj}) {
     useEffect(()=>{ //실시간 데이터베이스 문서들 가져오기
         // getTweets();
         const q = query(collection(db, "tweets" ),
-                    orderBy("createAt","desc")); //시간을 내림차순정렬
+                    orderBy("createAt","asc")); //시간을 내림차순정렬
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
           const newArray = [];
           querySnapshot.forEach((doc) => {
@@ -32,7 +32,7 @@ export default function Chatting({userObj}) {
       },[]);
 
   return (
-    <div >
+    <div className='Chatting'>
         <header className='header'>
             <div className="status-bar">
                 <div className="left-item">
@@ -55,10 +55,10 @@ export default function Chatting({userObj}) {
                 <div className="right-item"><a href="#"><FaSearch/><FaBars/></a></div>
             </div>
         </header>
+
         <main className='chatting'>
             <span className="date_info">Monday,Octover 17, 2022</span>
             <div className="chat_box my">
-                <div>
                 <span><TweetFactory  userObj={userObj}/></span>
                     {tweets.map(tweet => (
                     <Tweet 
@@ -67,7 +67,6 @@ export default function Chatting({userObj}) {
                     isOwner={tweet.createId === userObj.uid}
                     />
                     ))}
-                </div>
             </div>
             {/* <!-- other --> */}
             <div class="chat_box other">
@@ -81,18 +80,6 @@ export default function Chatting({userObj}) {
                 <span class="chat_time"><span>17</span>:<span>33</span></span>
             </div>
         </main>
-        {/* <!-- footer --> */}
-        <footer>
-            <span className="plus_btn"><Link><FaPlus/></Link></span>
-            <form action="/" method="post">
-                <fieldset className="text_box">
-                    <legend className="blind">채팅 입력창</legend>
-                    <label for="chatting" className="blind">채팅 입력</label>
-                    <span className="emoticon_btn"><a href="#"><FaSmile/></a></span>
-                    <span className="voice_btn"><a href="#"><FaMicrophone/></a></span>
-                </fieldset>
-            </form>
-        </footer>
     </div> 
   )
 }

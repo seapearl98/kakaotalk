@@ -1,0 +1,79 @@
+.factoryForm{
+    z-index: 1;
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.factoryInput__input{
+    z-index: 1;
+    position: relative;
+    display: block;
+    border: none;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+.factoryInput__arrow{
+    position: relative;
+    width: 15%;
+}
+.factoryInput__arrow__inner{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 13%; height: 54px;
+    line-height: 54px;
+    font-size: 24px;
+    text-align: center;
+    background: #ffd43d;
+    color: #3A1D1D;
+}
+.factoryInput__label{
+    cursor: pointer;
+    position: relative;
+    width: 14%;
+    background: #eaeaea;
+    svg{
+        font-size: 20px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.factoryInput__container{
+    z-index: 1;
+    width: 100vw;
+}
+
+.factoryForm__attachment{
+    position: absolute;
+    left: 5px; bottom: 60px;
+    width: 40px; height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #ffd43d;
+    img{
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+    }
+    .factoryForm__clear{
+        position: relative;
+        bottom: 65px;
+        svg{
+            width: 8px;
+            height: 8px;
+            background: #f00;
+            text-align: center;
+            padding: 1px;
+            color: #fff;
+            border-radius: 3px;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+    }
+}

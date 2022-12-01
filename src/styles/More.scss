@@ -4,9 +4,17 @@
 .tab_bar>ul>li:nth-child(4)>a{color: #513736;}
 main{height: 85.8%; padding-top: 64px;}
 
-/* user_info */
+.More{
+    /* user_info */
 .user_info{display: flex; align-items: center; height: 72px; border-bottom: 1px solid #ebebeb;}
-.profile_img{width: 50px;height: 50px;}
+.profile_img{width: 35px;height: 35px;
+            img{
+                width: 35px; height: 35px;
+                position: absolute;
+                left: -15px;
+                top: -10px;
+            }                
+}
 .profile_info{flex: auto; display: flex; flex-direction: column;}
 .profile_info .profile_name{font-size: 16px; font-weight: bold;}
 .profile_info .profile_email{color: #8e9399;}
@@ -37,3 +45,4 @@ main{height: 85.8%; padding-top: 64px;}
 .more_app li:nth-child(1) span.app_icon{background-image: url(../img/kakaostory.png);}
 .more_app li:nth-child(2) span.app_icon{background-image: url(../img/path.png);}
 .more_app li:nth-child(3) span.app_icon{background-image: url(../img/kakaofriends.png);}
+}
